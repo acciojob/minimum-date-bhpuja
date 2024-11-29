@@ -1,16 +1,29 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earliest Date Finder</title>
+    <script>
+        function minDate(dates) {
+            // Sort the dates array in ascending order
+            dates.sort();
+            // Return the first element of the sorted array, which will be the earliest date
+            return dates[0];
+        }
+
+        // Test cases
+        document.addEventListener("DOMContentLoaded", function () {
+            const test1 = ["2023/03/01", "2023/03/02", "2023/03/03"];
+            const test2 = ["2023/01/01", "2023/02/02", "2022/12/31"];
+
+            console.log("Earliest date in test1:", minDate(test1)); // Expected: "2023/03/01"
+            console.log("Earliest date in test2:", minDate(test2)); // Expected: "2022/12/31"
+        });
+    </script>
 </head>
-
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
-
+    <h1>Earliest Date Finder</h1>
+    <p>Open the browser's console to see the results of the test cases.</p>
 </body>
-
 </html>
